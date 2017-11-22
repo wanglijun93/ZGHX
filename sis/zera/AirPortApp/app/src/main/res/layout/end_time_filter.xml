@@ -1,0 +1,29 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dateselect2"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="5dp"
+    android:gravity="center"
+    >
+
+    <com.travelsky.airportapp.view.timeview.WheelView
+        android:id="@+id/end_days"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <com.travelsky.airportapp.view.timeview.WheelView
+        android:id="@+id/end_hour"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <com.travelsky.airportapp.view.timeview.WheelView
+        android:id="@+id/end_mins"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>

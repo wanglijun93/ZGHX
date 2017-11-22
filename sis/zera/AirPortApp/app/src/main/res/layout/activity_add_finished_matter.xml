@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back_index"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tl_finish_matter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:tabIndicatorColor="#0A57B0"
+        app:tabSelectedTextColor="#0A57B0"
+        app:tabIndicatorHeight="5dp"
+        app:tabTextColor="#000000"
+        app:tabTextAppearance="@style/tablayout_text"
+        app:tabGravity="fill"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_finish_matter"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <Button
+        android:id="@+id/btn_select_famf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/querenxuanze_button"
+        android:drawableLeft="@drawable/icon_ok"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:text="确认选择"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:visibility="invisible"/>
+
+</LinearLayout>

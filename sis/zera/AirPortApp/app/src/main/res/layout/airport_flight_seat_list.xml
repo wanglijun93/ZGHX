@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffeeeeef"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingRight="5dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="占用机位"
+                    android:textColor="#ff949494"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/used_planeseat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="0"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:paddingLeft="5dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="空余机位"
+                    android:textColor="#ff949494"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/free_planeseat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="0"
+                    android:textColor="#ff76bc55"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/airport_inout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/flightnewslist_msgbar"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_marginLeft="10dip"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <!-- 航班号 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/airport_flight_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:paddingBottom="5dip"
+                        android:paddingTop="5dip"
+                        android:text="机位"
+                        android:textColor="#ff949494"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                <!-- 始发城市 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/airport_flight_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:paddingBottom="5dip"
+                        android:paddingTop="5dip"
+                        android:text="类型"
+                        android:textColor="#ff949494"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!-- 计划出发时间 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/airport_flight_planstarttime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:paddingBottom="5dip"
+                        android:paddingTop="5dip"
+                        android:text="飞机号"
+                        android:textColor="#ff949494"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                <!-- 实际出发时间 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/airport_flight_realstarttime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:paddingBottom="5dip"
+                        android:paddingTop="5dip"
+                        android:text="航空公司"
+                        android:textColor="#ff949494"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!-- 计划到达时间 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/airport_flight_planendtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:paddingBottom="5dip"
+                        android:paddingTop="5dip"
+                        android:text="保障状态"
+                        android:textColor="#ff949494"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:background="#ffededed" />
+
+        <ListView
+            android:id="@+id/data_statics_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:listSelector="@android:color/transparent" />
+    </LinearLayout>
+
+
+</RelativeLayout>

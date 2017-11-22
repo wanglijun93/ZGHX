@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="查看签名信息"
+        android:id="@+id/print_eye"
+        android:icon="@drawable/attention_icon"
+        android:showAsAction="always" />
+</menu>

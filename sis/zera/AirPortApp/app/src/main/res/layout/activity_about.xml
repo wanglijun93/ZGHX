@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_about"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/general_grey_bg"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/about_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="50dip"
+                android:src="@drawable/airport_login_logo" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:id="@+id/about_version_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="版本号:"
+                        android:textColor="@color/green"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/about_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dip"
+                        android:layout_marginTop="2dip"
+                        android:layout_toRightOf="@id/about_version_textview"
+                        android:textColor="@color/green"
+                        android:textSize="14sp" />
+
+                    <TextView
+
+                        android:id="@+id/about_link_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/about_version_textview"
+                        android:layout_marginTop="10dip"
+                        android:text="链    接:"
+                        android:textColor="@color/green"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/about_link_textview2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/about_link_textview"
+                        android:layout_below="@id/about_version_textview"
+                        android:layout_marginLeft="4dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@id/about_link_textview"
+                        android:text="www.umetrip.com"
+                        android:textColor="@color/green"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/about_company_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/about_link_textview"
+                        android:layout_marginTop="10dip"
+                        android:text="服务商:"
+                        android:textColor="@color/green"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/about_company_textview2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/about_company_textview"
+                        android:layout_below="@id/about_link_textview"
+                        android:layout_marginLeft="4dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@id/about_company_textview"
+                        android:text="中航信移动科技有限公司"
+                        android:textColor="@color/green"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

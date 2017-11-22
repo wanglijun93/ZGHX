@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffeeeeef"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未来预计滞留情况"
+                android:textColor="#ff949494"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/airport_inout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/flightnewslist_msgbar"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <!-- 时间 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/airport_flight_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:paddingBottom="5dip"
+                        android:paddingTop="5dip"
+                        android:text="时间"
+                        android:textColor="#ff949494"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                <!-- 航班数 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/airport_flight_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:paddingBottom="5dip"
+                        android:paddingTop="5dip"
+                        android:text="航班数"
+                        android:textColor="#ff949494"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!-- 旅客数（已值机） -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/airport_flight_planstarttime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:paddingBottom="5dip"
+                        android:paddingTop="5dip"
+                        android:text="旅客数(已值机)"
+                        android:textColor="#ff949494"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:background="#ffededed" />
+
+        <ListView
+            android:id="@+id/delay_statics_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:listSelector="@android:color/transparent" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue">#0A57B0</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="general_grey_bg">#eeeded</color>
+    <color name="airport_login_title">#ffb9babb</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#76BB55</color>
+    <color name="regist_font">#333333</color>
+    <color name="black">#000000</color>
+    <color name="gray">#404040</color>
+    <color name="general_text_color">#000000</color>
+    <!-- 搜索列表颜色 -->
+    <color name="data_statics_view">#ffededed</color>
+    <!-- 自定义下拉刷新 -->
+    <color name="transparent">#00000000</color>
+    <color name="background">#F7F4F0</color>
+    <color name="title_color">#333333</color>
+</resources>

@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="bottm_style">
+        - <!--  Customize your theme here.
+  -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="tablayout_text">
+        <item name="android:textSize">15sp</item>
+    </style>
+    <!-- checkbox -->
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+    <!-- priviewdoc -->
+    <style name="PriviewDoc" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/priview_doc</item>
+    </style>
+
+    <!-- 自定义下拉刷新 -->
+    <string name="header_hint_refresh_normal">下拉刷新</string>
+    <string name="header_hint_refresh_ready">松开刷新</string>
+    <string name="header_hint_refresh_loading">正在刷新&#8230;</string>
+    <string name="header_hint_refresh_time">时间：</string>
+    <string name="footer_hint_load_normal">上拉加载更多</string>
+    <string name="footer_hint_load_ready">加载更多...</string>
+</resources>

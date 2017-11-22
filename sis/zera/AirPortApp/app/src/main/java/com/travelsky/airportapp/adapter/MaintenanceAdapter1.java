@@ -1,0 +1,130 @@
+package com.travelsky.airportapp.adapter;
+
+import android.content.Context;
+import android.content.Intent;
+import android.support.design.widget.TabLayout;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+
+import com.travelsky.airportapp.R;
+import com.travelsky.airportapp.activity.ModifySecurityDetailsActivity;
+import com.travelsky.airportapp.domain.FlightData;
+
+import java.util.List;
+
+/**
+ * 离线模式下的数据适配器
+ * @author wlj
+ *         添加已完成事项的数据
+ *         机务页面数据适配器
+ */
+public class MaintenanceAdapter1 extends BaseAdapter {
+
+    private Context context;
+    private List<FlightData.AccaServiceDateBean> accaServiceBeen;
+    //判断选项是否被选中
+    private boolean isChecked = true;
+    private String name;
+    private TabLayout mTabLayout;
+    private List<String> mTitleList;
+    private static final String[] names = {"飞机勤务", "一般服务", "例行检查", "非例行检查",
+            "飞机放行"
+    };
+
+
+    public MaintenanceAdapter1(Context context, List<FlightData.AccaServiceDateBean> accaServiceBeen, TabLayout mTabLayout,
+                               List<String> mTitleList) {
+        this.context = context;
+        this.accaServiceBeen = accaServiceBeen;
+        this.mTabLayout = mTabLayout;
+        this.mTitleList = mTitleList;
+    }
+
+    @Override
+    public int getCount() {
+        return names.length;
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return names[position];
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public View getView(final int position, View convertView, ViewGroup parent) {
+
+        ViewHolder holder = null;
+        if (convertView == null) {
+            holder = new ViewHolder();
+            convertView = View.inflate(context, R.layout.matter_gridview_item, null);
+
+            holder.btn_matter = (Button) convertView.findViewById(R.id.btn_matter);
+
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
+        }
+        
+        if(accaServiceBeen!=null) {
+            for (FlightData.AccaServiceDateBean bean : accaServiceBeen){
+                if (bean.get_item_name().equals(names[position])) {
+                    holder.btn_matter.setBackgroundResource(R.drawable.button_shape);
+                }
+            }
+        }
+
+        holder.btn_matter.setText(names[position]);
+        holder.btn_matter.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+                if (accaServiceBeen != null) {
+
+                    for (FlightData.AccaServiceDateBean bean : accaServiceBeen) {
+                        if (bean.get_item_name().equals(names[position])) {
+                            isChecked = false;
+                            break;
+                        } else {
+                            isChecked = true;
+                        }
+                    }
+                }
+
+                if (isChecked) {
+
+                    String service_type = "";
+                    if (0 == mTabLayout.getSelectedTabPosition()) {
+                        service_type = mTitleList.get(0);
+                    } else if (1 == mTabLayout.getSelectedTabPosition()) {
+                        service_type = mTitleList.get(1);
+                    }else {
+                        service_type = mTitleList.get(2);
+                    }
+
+                    name = names[position];
+                    Intent intent = new Intent(context, ModifySecurityDetailsActivity.class);
+                    intent.putExtra("name", name);
+                    intent.putExtra("Service_Seq", "");
+                    intent.putExtra("start_time","");
+                    intent.putExtra("end_time", "");
+                    intent.putExtra("service_type", service_type);
+                    context.startActivity(intent);
+
+                }
+            }
+        });
+        return convertView;
+    }
+
+    class ViewHolder {
+        Button btn_matter;
+    }
+}
